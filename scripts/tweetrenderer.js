@@ -786,11 +786,11 @@ function renderMedia(t) {
         }
     }
 
-    if(cws.length > 0) {
+    /*if(cws.length > 0) {
         cws = [...new Set(cws)];
         cws = "Content warnings: " + cws.join(', ');
         _html += html`<br><div class="tweet-media-cws">${cws}</div>`;
-    }
+    }*/
     return _html;
 }
 
