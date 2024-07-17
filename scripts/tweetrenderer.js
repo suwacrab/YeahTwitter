@@ -723,8 +723,10 @@ function renderMedia(t) {
 
     for(let i = 0; i < t.extended_entities.media.length; i++) {
         let m = t.extended_entities.media[i];
-        let toCensor = t.possibly_sensitive;
-        if(m.type === 'photo') {
+    //  let toCensor = t.possibly_sensitive;
+        let toCensor = false;
+
+		if(m.type === 'photo') {
             let [w, h] = sizeFunctions[t.extended_entities.media.length](m.original_info.width, m.original_info.height);
             _html += html`
             <img 
